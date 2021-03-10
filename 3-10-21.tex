@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}%you can add twocolumn as another argument to make into double column
+\usepackage[margin=1in]{geometry} % for customizing page layout
+\usepackage{graphicx}%package for adding images to document
+\usepackage{amsthm, amsmath, amssymb}%packages for math 
+\usepackage{ragged2e}%for cleaner look.
+\usepackage[onehalfspacing]{setspace}
+\usepackage[loose, nice]{units} %replace "nice" by "ugly" for units in upright fractions
+ 
+\title{Computer Vision Mathematics: Homework 3}
+\author{Henri Prudhomme}
+\date{March 10, 2021}
+
+\begin{document}
+\maketitle
+
+\section{Linear Algebra Solutions}
+
+\begin{itemize}
+\item 1.7 \# 19: 
+A diagonal entry $s_{jj}$ of a symmetric matrix cannot be smaller than all the $\lambda$'s.
+Suppose this were false, then $S-s_{jj}I$ would have positive eigenvalues. 
+
+There are two ways we can come to this conclusion.
+
+\begin{enumerate}
+\item
+\begin{itemize}
+\item[] $S = Q\Lambda Q^T$
+\item[] $S-s_{jj}I = Q\Lambda Q^T - s_{jj}I$
+\item[] $S-s_{jj}I = Q\Lambda Q^T - Q(s_{jj}I)Q^T$
+\item[] $S-s_{jj}I = Q(\Lambda -s_{jj}I)Q^T$
+\item[] Let $\Lambda_2 = \Lambda -s_{jj}I$
+\item[] $S = Q\Lambda_2 Q^T$
+\end{itemize}
+\item
+\begin{itemize}
+\item[] Equation 5 from 1.6: $(A + s I)x = \lambda x + s x = (\lambda + s)x$
+
+Applying to this problem:$(S-s_{jj}I)x = \lambda x -s_{jj} x = (\lambda - s_{jj}) x$
+\end{itemize}
+\end{enumerate}
+
+Therefore $$\lambda_i - s_{jj} > 0 |_{i=0...n}$$
+If this is the case, then the matrix is Symmetric Positive Definite.
+
+However, from 1.7 \# 18, we know that a symmetric positive definite matrix cannot have a $0$ along its diagonal. Therefore, the first statement must be true.
+
+\item 
+\end{itemize}
+
+\end{document}
