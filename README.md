@@ -1,3 +1,4 @@
-# LinearAlgebraNotes
+# This is the repository for CS390: Computer Vision Mathematics
 
-A collection of jupyter notes written for Jula and Linear Algebra independent study
+I have compiled the materials that I produced during our spring sessions. This includes homework, lecture notes, and a collection of PYHON NOTEBOOKS which demonstrates the use of computer vision mathematics in the form of a computer science project.
+
